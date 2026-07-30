@@ -40,7 +40,9 @@ Mỗi lần push mới lên nhánh `main`, Vercel sẽ tự build và cập nh�
 ## Lưu ý tài nguyên
 
 - Media dùng trên website nằm trong `public/media` và đã được đưa vào Git.
-- `assets_thật` chứa file nguồn dung lượng lớn, gồm video vượt giới hạn file
-  thông thường của GitHub. Thư mục này được giữ trên máy và không cần cho build.
+- `assets_thật` chứa file nguồn dung lượng lớn và được lưu bằng Git LFS. Sau khi
+  clone, chạy `git lfs pull` nếu Git chưa tự tải các file này.
+- Website không đọc trực tiếp `assets_thật`; build production chỉ dùng các bản
+  media đã tối ưu trong `public/media`.
 - Video trong project được nhúng từ bản YouTube đã xuất bản.
 - Form liên hệ mở ứng dụng email mặc định; website không lưu dữ liệu biểu mẫu.
