@@ -1,21 +1,46 @@
 # Mỹ Nguyễn — Marketing Portfolio
 
-One-page portfolio rebuilt from Mỹ Nguyễn's verified project assets and prior
-Readymag portfolio. The layout uses a lightweight React page with native CSS
-animations and no third-party carousel or animation library.
+Portfolio một trang được xây dựng từ nội dung và tài nguyên đã xác minh của
+Mỹ Nguyễn. Website sử dụng React, Next.js/Vinext và CSS thuần cho animation,
+gallery, project slider và responsive.
 
-## Local development
+## Chạy trên máy
+
+Yêu cầu Node.js 22.13 trở lên.
 
 ```powershell
+npm ci
 npm run dev
 ```
 
-## Validation
+Mở `http://localhost:3000`.
+
+## Kiểm tra
 
 ```powershell
-npm run build
 npm test
+npm run lint
+npm run build:vercel
 ```
 
-The contact form opens the visitor's default email app. It does not store or
-transmit form data through a backend.
+## Deploy public bằng Vercel
+
+Repository đã có `vercel.json`, vì vậy không cần thay đổi Build Command thủ
+công.
+
+1. Đăng nhập [Vercel](https://vercel.com/) bằng GitHub.
+2. Chọn **Add New → Project**.
+3. Import repository `basangnguyen/M-Nguy-n-Portfolio`.
+4. Giữ **Root Directory** là thư mục gốc và **Framework Preset** là Next.js.
+5. Chọn **Deploy**.
+6. Khi hoàn tất, Vercel cung cấp URL dạng `https://ten-project.vercel.app`.
+
+Mỗi lần push mới lên nhánh `main`, Vercel sẽ tự build và cập nhật production.
+
+## Lưu ý tài nguyên
+
+- Media dùng trên website nằm trong `public/media` và đã được đưa vào Git.
+- `assets_thật` chứa file nguồn dung lượng lớn, gồm video vượt giới hạn file
+  thông thường của GitHub. Thư mục này được giữ trên máy và không cần cho build.
+- Video trong project được nhúng từ bản YouTube đã xuất bản.
+- Form liên hệ mở ứng dụng email mặc định; website không lưu dữ liệu biểu mẫu.
