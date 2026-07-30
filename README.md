@@ -36,6 +36,9 @@ công.
 6. Khi hoàn tất, Vercel cung cấp URL dạng `https://ten-project.vercel.app`.
 
 Mỗi lần push mới lên nhánh `main`, Vercel sẽ tự build và cập nhật production.
+Trong **Settings → Git**, có thể giữ Git LFS ở trạng thái tắt vì production
+không đọc `assets_thật`. Chỉ bật LFS và redeploy nếu cần tải toàn bộ file nguồn
+vào môi trường build; thao tác này sẽ tải thêm khoảng 210 MB.
 
 ## Lưu ý tài nguyên
 
